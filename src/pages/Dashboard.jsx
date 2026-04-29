@@ -86,7 +86,7 @@ const kpiCards = [
         statusIcon: {
             path: svgPaths.pde19380,
             viewBox: "0 0 11.6667 7",
-            sizeClass: "w-[11.667px] h-[7px]",
+                sizeClass: "w-[11.667px] h-[7px]",
             color: "#006C49",
         },
         statusTextClass: "text-[#006c49]",
