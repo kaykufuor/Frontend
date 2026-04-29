@@ -6,6 +6,8 @@ import Personal from "./pages/Personal";
 import Firm from "./pages/firm";
 import Device from "./pages/device";
 import Dashboard from "./pages/Dashboard";
+import Home from "./pages/dashboard/Home";
+import Analytics from "./pages/dashboard/analytics";
 // import Onboarding from "../imports/Onboarding/Onboarding";
 // import Onboarding1 from "../imports/Onboarding-1/Onboarding";
 // import Onboarding2 from "../imports/Onboarding-2/Onboarding";
@@ -41,12 +43,22 @@ const router = createBrowserRouter([
                         path: "/onboarding/device",
                         element: <Device />
                     },
-                
+
                 ]
             },
             {
                 path: "/dashboard",
-                element: <Dashboard/>
+                element: <Dashboard />,
+                children: [
+                    {
+                        path: "/dashboard",
+                        element: <Home />,
+                    },
+                    {
+                        path: "/dashboard/analytics",
+                        element: <Analytics />,
+                    }
+                ]
             }
 
             //   { path: "onboarding-1", Component: Onboarding },
